@@ -1,0 +1,117 @@
+﻿/* Alagard by Hewett Tsoi */
+@font-face {
+    font-family: 'Alagard';
+    src: url('alagard.ttf');
+}
+
+/* Apple II font by KreativeKorp */
+@font-face {
+    font-family: 'PrintChar21';
+    src: url('PrintChar21.ttf');
+}
+
+/* DS font */
+@font-face {
+    font-family: 'NintendoDS';
+    src: url('Nintendo-DS-BIOS.ttf');
+}
+
+/* Pixel Operator */
+@font-face {
+    font-family: 'PixelOperator';
+    src: url('PixelOperator.ttf');
+}
+
+
+body {
+    font-family: 'Global User Interface';
+    width: 640px;
+    max-width: 100%;
+    height: 85vh;
+    margin: auto;
+    text-align: center;
+    color: red;
+    background-image: url("bg2.png");
+    background-color: #040303;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    text-rendering:geometricPrecision;
+    image-rendering: optimizeQuality;
+}
+
+main {
+    font-family: PixelOperator;
+    font-size: 16px;
+    width: 410px;
+    max-width: 65%;
+    height: 100%;
+    float: left;
+    background-color: black;
+    color: mediumslateblue;
+    border: solid thin;
+    border-color: red;
+    text-align: left;
+    background-image: url("bg2.png");
+}
+
+p {
+    padding: .25em;
+    white-space: pre-wrap;
+    color: mediumslateblue;
+}
+
+
+#sidebar {
+    font-family: 'Alagard';
+    width: 213px;
+    max-width: 34%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    float: right;
+    display: block;
+    background-color: #040303;
+    background-image: url("techbg.gif");
+    background-position: center;
+    color: red;
+    border: solid thin;
+    border-color: red;
+}
+
+.marquee-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: calc(fit-content);
+    margin: 0;
+}
+
+@keyframes title-marquee {
+    100% { transform: translateX(-187px); }
+}
+#title-marquee {
+    margin:0;
+    float: left;
+    background-image: url("baameows.png");
+    background-repeat: repeat-x;
+    width: calc(187px + 100%);
+    height: 23px;
+    animation: title-marquee 3s linear infinite;
+}
+
+@keyframes tape-marquee {
+    100% { transform: translateX(6px); }
+}
+.tape-marquee {
+    float: right;
+    background-image: url("taperight.png");
+    background-repeat: repeat-x;
+    width: calc(7px + 100%);
+    height: 10px;
+    animation: tape-marquee .32s linear infinite;
+}
+
+.vertical-center {
+    margin: 0;
+    top: 50%;
+}
