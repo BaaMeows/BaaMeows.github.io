@@ -64,9 +64,10 @@ p {
     color: red;
     background-color: black;
     border: solid thin;
-    border-width: 0, 1, 1, 1;
+    border-top-style: none;
+    border-bottom-style: none;
     border-color: red;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 #main-iframe {
@@ -120,7 +121,6 @@ p {
     color:red;
     font-size: 16px;
     text-align: center;
-    margin-top:0px;
 }
 
 .navbutton {
