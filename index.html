@@ -47,18 +47,22 @@
 <!-- embedded bandcamp player for music and tunes and also songs -->
 <!-- divider --><div class="marquee-container"><div class="tape-marquee"></div></div>
 <!-- desktop -->
-<div id="music-desktop" style="height: 170px; width: fit-content">
-    <iframe style="margin: 0 0; border: 0; width: 170px; height: 170px;" src="https://bandcamp.com/EmbeddedPlayer/album=4275574976/size=large/bgcol=333333/linkcol=e32c14/minimal=true/track=1598575473/transparent=true/" seamless>
-    <a href="https://killallmusic.bandcamp.com/album/causality-violations">Causality Violations by Hello Meteor</a></iframe></div>
-<!-- mobile -->
-<div id="music-mobile" style="height: 42px; width: 42px; border-right: 10px; border-left: 10px; border-style:inset; border-color: red;">
-    <iframe id="music-mobile" style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=4275574976/size=small/bgcol=333333/linkcol=e32c14/track=1598575473/transparent=true/" seamless>
-    <a href="https://killallmusic.bandcamp.com/album/causality-violations">Causality Violations by Hello Meteor</a></iframe></div>
+<div style="height: 42px; width: fit-content; overflow: hidden;">
+    <iframe style="border: 0; width: 150%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=4275574976/size=small/bgcol=333333/linkcol=e32c14/track=1598575473/transparent=false/" seamless>
+        <a href="https://killallmusic.bandcamp.com/album/causality-violations">Causality Violations by Hello Meteor</a></iframe></div>
 <!-- divider --><div class="marquee-container"><div class="tape-marquee"></div></div>
 <!-- navigation -->
 <h1>NAV</h1>
-<button class="navbutton" onclick='SetFrame("homepage.html")'> Home </button>	
+<button class="navbutton" onclick='SetFrame("homepage.html")' style="border-bottom: 0px;"> Home </button>
 </nav> <!-- nav end -->
+<!-- divider --><div class="marquee-container"><div class="tape-marquee"></div></div>
+<div id="buttons">
+    <a href="https://catbyte.site/"  target="_blank"><img src="https://catbyte.site/buttons/catbytebutton.png"/></a>
+    <a href="https://sadgrl.online/" target="_blank"><img src="https://sadgrl.online/assets/images/buttons/sadgrlonline.gif"/></a>
+    <a href="https://melonland.net/" target="_blank"><img src="https://melonland.net/images/melonland-badge-2.gif"/></a>
+    <a href="https://yesterweb.org/" target="_blank"><img src="https://yesterweb.org/img/button.png"></a>
+</div> <!-- buttons end -->
+<!-- divider --><div class="marquee-container"><div class="tape-marquee"></div></div>
 </div> <!-- sidebar end -->
 </div> <!-- main flexbox end -->
 </div> <!-- main container end -->
@@ -67,6 +71,6 @@
     <img src="trans60.gif" alt="trans flag gif"/>
     <img src="watermark.png" alt="fursona" style="height: 87px;"/>
 </footer>
-<script>NekoType="socks"</script><h1 id=nl><script src="https://webneko.net/n20171213.js"></script><a href="https://webneko.net">Neko</a></h1>
+<script class="desktop-only">NekoType="socks"</script><h1 id=nl><script src="https://webneko.net/n20171213.js"></script><a href="https://webneko.net">Neko</a></h1>
 </body>
 </html>

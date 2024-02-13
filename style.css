@@ -21,7 +21,7 @@
 
 body {
     color: red;
-    background-image: url("bg2.png");
+    background-image: url("bg.gif");
     background-color: #040303;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -48,7 +48,7 @@ body {
 }
 
 main {
-    flex-shrink: 3;
+    flex-shrink: 5;
     flex-basis: 100%;
     border: solid thin;
     border-color: red;
@@ -80,7 +80,8 @@ h1 {
 }
 
 #sidebar {
-    max-width: 170px;
+    flex-basis: 21%;
+    flex-shrink: 1;
     height: fit-content;
     text-align: center;
     color: red;
@@ -89,6 +90,17 @@ h1 {
     border-top-style: none;
     border-bottom-style: none;
     border-color: red;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:center;
+    align-content:center;
+    justify-content: space-evenly;
+    padding-top:2px;
+    padding-bottom:2px;
 }
 
 #main-iframe {
@@ -151,5 +163,5 @@ h1 {
     padding: 5px;
  }
 
-@media (max-width: 639px) { #music-desktop {display: none;} }
-@media (min-width: 641px) { #music-mobile {display: none;} }
+@media (max-width: 639px) { .desktop-only {display: none;} }
+@media (min-width: 641px) { .mobile-only {display: none;} }
