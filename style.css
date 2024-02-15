@@ -146,13 +146,12 @@ h1 {
     top: 50%;
 }
 
-.navbutton {
+.nav_link {
     font-family: "PixelOperator";
     font-size: 16px;
     display: block;
     width: 100%;
     color: mediumslateblue;
-    background-color: #040303;
     padding-top: 2px;
     padding-bottom: 2px;
     padding:0%;
@@ -160,6 +159,7 @@ h1 {
     border-right:0px;
     border-color: red;
     padding: 5px;
+    background-color: #040303;
  }
 
 @media (max-width: 639px) { .desktop-only {display: none;} }

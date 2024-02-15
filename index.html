@@ -29,8 +29,7 @@
 <script>
     var frame = document.getElementById('main-iframe');
     var main = document.getElementById('main');
-    var booWomp = Date.now();
-    function SetFrame(name) { frame.src = name + '?v=' + booWomp; }
+    function SetFrame(name) { frame.src = name; }
     function resizeFrame() {
         frame.style.height = frame.contentWindow.document.documentElement.scrollHeight + 'px';
         frame.style.minHeight = main.clientHeight + 'px';
@@ -53,14 +52,20 @@
 <!-- divider --><div class="marquee-container"><div class="tape-marquee"></div></div>
 <!-- navigation -->
 <h1>NAV</h1>
-<button class="navbutton" onclick='SetFrame("homepage.html")' style="border-bottom: 0px;"> Home </button>
+<button class="nav_link" onclick='SetFrame("homepage.html")' style="border-bottom: 0px;"> home </button>
+<button class="nav_link" onclick='SetFrame("https://baameows.123guestbook.com/")' style="border-bottom: 0px;"> sign my guestbook </button>
+<!--<a class="nav_link" href="https://baameows.123guestbook.com/">sign my guestbook</a>-->
 </nav> <!-- nav end -->
-<!-- divider --><div class="marquee-container"><div class="tape-marquee"></div></div>
+<!-- my tomanotchi!!! -->           <!-- divider --><div class="marquee-container"><div class="tape-marquee"></div></div>
+<h1>feed my weird dog for me</h1>
+<a href="https://tamanotchi.world/10469c"><img src="https://tamanotchi.world/i/10469" alt="It's tamaNOTchi! Click to feed!"></a>
+<!-- buttons!!! -->                 <!-- divider --><div class="marquee-container"><div class="tape-marquee"></div></div>
 <div id="buttons">
     <a href="https://catbyte.site/"  target="_blank"><img src="https://catbyte.site/buttons/catbytebutton.png"/></a>
     <a href="https://sadgrl.online/" target="_blank"><img src="https://sadgrl.online/assets/images/buttons/sadgrlonline.gif"/></a>
     <a href="https://melonland.net/" target="_blank"><img src="https://melonland.net/images/melonland-badge-2.gif"/></a>
     <a href="https://yesterweb.org/" target="_blank"><img src="https://yesterweb.org/img/button.png"></a>
+    <a href="http://textures.neocities.org/" target="_blank"><img src="http://textures.neocities.org/images/badge.gif"></a>
 </div> <!-- buttons end -->
 <!-- divider --><div class="marquee-container"><div class="tape-marquee"></div></div>
 </div> <!-- sidebar end -->
