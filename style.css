@@ -185,3 +185,15 @@ h1 {
 #pagedoll:hover {
     animation: rotate .2s linear infinite;
 }
+
+a:hover {
+    animation: tilt-shake .3s linear infinite;
+}
+
+@keyframes tilt-shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+  }
