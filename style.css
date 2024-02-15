@@ -181,3 +181,7 @@ h1 {
     height:400px;
     animation: rotate 3s linear infinite;
 }
+
+#pagedoll:hover {
+    animation: rotate .2s linear infinite;
+}
