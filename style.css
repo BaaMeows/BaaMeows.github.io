@@ -78,9 +78,14 @@ h1 {
     text-transform: uppercase;
 }
 
-#sidebar {
+#sidebar_flex {
     flex-basis: 21%;
     flex-shrink: 1;
+    height: fit-content;
+    border:none;
+}
+
+#sidebar {
     height: fit-content;
     text-align: center;
     color: red;
@@ -100,6 +105,11 @@ h1 {
     justify-content: space-evenly;
     padding-top:2px;
     padding-bottom:2px;
+}
+
+#melonland-surf-club {
+    margin:auto;
+    padding: 7px;
 }
 
 #main-iframe {
