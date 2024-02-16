@@ -66,6 +66,10 @@ p {
     text-rendering: optimizeLegibility;
 }
 
+a:hover{
+    animation: wobble .5s linear infinite;
+}
+
 h1 {
     padding: 0;
     margin: 0;
@@ -173,6 +177,10 @@ h1 {
     border:none;
  }
 
+ .nav_link:hover{
+    animation: wobble .5s linear infinite;
+}
+
 @media (max-width: 639px) { .desktop-only {display: none;} }
 @media (min-width: 641px) { .mobile-only {display: none;} }
 
@@ -190,8 +198,8 @@ h1 {
     animation: rotate .2s linear infinite;
 }
 
-.anim_on_hover:hover {
-    animation: tilt-shake .5s linear infinite;
+.wobble_on_hover:hover {
+    animation: wobble .5s linear infinite;
 }
 
 @keyframes tilt-shake {
@@ -205,3 +213,21 @@ h1 {
     99% { transform: translate(-1px, 0px); }
     100% { transform: translate(1px, 1px); }
   }
+
+  @keyframes wobble {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-7deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
