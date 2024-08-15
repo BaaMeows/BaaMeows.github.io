@@ -1,22 +1,27 @@
 ﻿/* Pixel Operator */
 @font-face {
-    font-family: 'PixelOperator';
-    src: url('PixelOperator.ttf');
+    font-family: 'Pixel Operator';
+    src: url('fonts/PixelOperator.ttf');
 }
 /* JMH Cthulhumbus Arcade, Copyright 2018 jorge Morón, personal use only */
 @font-face {
-    font-family: 'cthulhumbus';
-    src: url('cthulhumbus_arcade.otf');
+    font-family: 'dogica';
+    src: url('fonts/dogica/dogicapixel.ttf');
 }
 
 @font-face {
     font-family: 'VCR';
-    src: url('VCR_OSD_MONO.ttf');
+    src: url('fonts/VCR_OSD_MONO.ttf');
 }
 
 @font-face {
     font-family: 'OCR_A';
-    src: url('OCRA.ttf');
+    src: url('fonts/ocraext.ttf');
+}
+
+@font-face {
+    font-family: 'FreePixel';
+    src: url('fonts/FreePixel.ttf');
 }
 
 body {
@@ -25,7 +30,6 @@ body {
     background-color: #040303;
     background-repeat: repeat;
     background-attachment: fixed;
-    image-rendering: optimizeQuality;
 }
 
 #main-container {
@@ -33,16 +37,15 @@ body {
     max-width: 100%;
     height: 100%;
     margin: auto;
+    image-rendering: pixelated;
 }
 
 #main-flexbox {
-    width: 100%;
+    width: 656;
     height: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: stretch;
-    align-content: stretch;
     gap: 10px;
 }
 
@@ -51,40 +54,55 @@ main {
     flex-basis: 100%;
     border: solid thin;
     border-color: red;
-    /* background-image: url("bg2.png"); */
     height: fit-content;
     min-height: calc(100vh - 85px)
 }
 
+h1 {
+    font: 16px "FreePixel";
+    margin: 5px 0px;
+    color:red;
+}
+
 p {
-    padding: 5px;
-    margin: 0;
+    font: 16px "FreePixel";
+    margin: 5px 0px;
     white-space: pre-wrap;
     color: #9370d8;
-    font-family: 'PixelOperator';
-    font-size: 16px;
-    text-rendering: optimizeLegibility;
 }
 
-a:hover{
-    animation: wobble .5s linear infinite;
+.nav_link {
+    font: 16px "FreePixel";
+    
+    color: mediumslateblue;
+    background: none!important;
+    border: none;
+    display: block;
+    margin: auto;
+    /*font-weight: 500;
+    letter-spacing: -0px;*/
+    text-decoration: underline;
+
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+ }
+
+.wiggle:hover{
+    -webkit-animation-name: hvr-buzz;
+    animation-name: hvr-buzz;
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 }
 
-h1 {
-    padding: 0;
-    margin: 0;
-    font-family: 'OCR_A';
-    color:red;
-    font-size: 16px;
-    text-align: center;
-    letter-spacing: 1px;
-    text-rendering: unset;
-    text-transform: uppercase;
-}
+.nohover:hover { border: 0 }
 
 #sidebar_flex {
-    flex-basis: 21%;
-    flex-shrink: 1;
+    flex-basis: 200px;
+    flex-shrink: 0;
     height: fit-content;
     border:none;
 }
@@ -135,6 +153,7 @@ h1 {
     width: 100%;
     height: fit-content;
     margin: 0;
+    padding: 0;
 }
 
 @keyframes title-marquee {
@@ -153,6 +172,7 @@ h1 {
 @keyframes tape-marquee {
     100% { transform: translateX(6px); }
 }
+
 .tape-marquee {
     float: right;
     background-image: url("taperight.png");
@@ -167,18 +187,20 @@ h1 {
     top: 50%;
 }
 
-.nav_link {
-    font-family: "PixelOperator";
-    font-size: 16px;
-    display: block;
-    color: mediumslateblue;
-    margin:auto;
-    background-color: #040303;
-    border:none;
- }
+.navigation {
+    margin: 10px 0px 12px 0px;
+}
 
  .nav_link:hover{
-    animation: wobble .5s linear infinite;
+    /*-webkit-animation-name: hvr-buzz;
+    animation-name: hvr-buzz;
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite; */
+    text-shadow: 0 0 5px #ff0000;
 }
 
 @media (max-width: 639px) { .desktop-only {display: none;} }
@@ -192,14 +214,6 @@ h1 {
     float:right;
     height:400px;
     animation: rotate 3s linear infinite;
-}
-
-#pagedoll:hover {
-    animation: rotate .2s linear infinite;
-}
-
-.wobble_on_hover:hover {
-    animation: wobble .5s linear infinite;
 }
 
 @keyframes tilt-shake {
@@ -231,3 +245,41 @@ h1 {
         transform: rotate(0deg);
     }
 }
+
+/* Buzz */
+@-webkit-keyframes hvr-buzz {
+    50% {
+      -webkit-transform: translateX(3px) rotate(2deg);
+      transform: translateX(3px) rotate(2deg);
+    }
+    100% {
+      -webkit-transform: translateX(-3px) rotate(-2deg);
+      transform: translateX(-3px) rotate(-2deg);
+    }
+  }
+  @keyframes hvr-buzz {
+    50% {
+      -webkit-transform: translateX(3px) rotate(2deg);
+      transform: translateX(3px) rotate(2deg);
+    }
+    100% {
+      -webkit-transform: translateX(-3px) rotate(-2deg);
+      transform: translateX(-3px) rotate(-2deg);
+    }
+  }
+  .hvr-buzz {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+  }
+  .hvr-buzz:hover, .hvr-buzz:focus, .hvr-buzz:active {
+    -webkit-animation-name: hvr-buzz;
+    animation-name: hvr-buzz;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
