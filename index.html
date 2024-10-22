@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>baameows' baa house</title>
-    <link href="style.css?v=2024-02-15-0" rel="stylesheet" type="text/css" media="all">
+    <link href="style.css?v=2024.07.12.0" rel="stylesheet" type="text/css" media="all">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 </head>
+
 
 <body>
 
@@ -25,17 +26,62 @@
 <main id="main">
 <!-- contents -->
 <!-- EEEEEVVVVVVIIIIIIIIIIIILLLLLLLLLLLLLLLLLLLLLLLLLLLLL -->
-<iframe id="main-iframe" src="not_found.html" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" onload="resizeFrame()"></iframe>
+<iframe id="main-iframe" src="not_found.html?v=2024.07.12.0" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allow="nested-history 'none'" onload="resizeFrame()"></iframe>
+
 <script>
-    var frame = document.getElementById('main-iframe');
-    var main = document.getElementById('main');
-    function SetFrame(name) { frame.src = name; }
-    function resizeFrame() {
-        frame.style.height = frame.contentWindow.document.documentElement.scrollHeight + 'px';
-        frame.style.minHeight = main.clientHeight + 'px';
+
+var frame = document.getElementById('main-iframe');
+var main = document.getElementById('main');
+
+function resizeFrame() {
+    frame.style.height = frame.contentWindow.document.documentElement.scrollHeight + 'px';
+    frame.style.minHeight = main.clientHeight + 'px';
+}
+
+function LoadPage(page) {
+    var link = "not_found.html?v=2024.07.12.0";
+    switch(page){
+        case null:
+        case "home": link = "homepage.html"; break;
+        case "guestbook": link = "https://baameows.atabook.org"; break;
+        break;
     }
-    SetFrame("homepage.html?v=24.05.24")
-    window.addEventListener('resize', resizeFrame());
+    frame.src = link;
+}
+
+function ChangePage(newpage) {
+    //LoadPage(newpage);
+    //var newurl = location.protocol + '//' + location.host + location.pathname + '?page=' + newpage;
+    //history.pushState(newpage, "", '?page=' + newpage);
+    //window.history.replaceState(newpage,"", '?page=' + newpage);
+
+    history.pushState(newpage, "", '?page=' + newpage);
+    //history.replaceState(newpage,"", '?page=' + newpage);
+    //LoadPage(newpage);
+    var link = "not_found.html?v=2024.07.12.0";
+    switch(newpage){
+        case null:
+        case "home": link = "homepage.html"; break;
+        case "guestbook": link = "https://baameows.atabook.org"; break;
+        break;
+    }
+   frame.src = link;
+
+}
+
+var urlParams = new URLSearchParams(window.location.search);
+var page = urlParams.get('page');
+LoadPage(page);
+
+window.addEventListener('resize', resizeFrame());
+window.addEventListener("popstate", (event) => {
+    //setTimeout(doSomeThing, 0);
+  setTimeout(alert(
+    `location: ${document.location}, state: ${JSON.stringify(event.state)}`,
+  ),0);
+  //history.replaceState(newpage,"", `?page=${JSON.stringify(event.state)}`);
+});
+
 </script>
 </main>
 
@@ -44,12 +90,15 @@
 <!-- divider --><div class="marquee-container"><div class="tape-marquee"></div></div>
 <div style="height: 20px; align-content:center"><script type="text/javascript" src="//counter.websiteout.net/js/6/0/0/0"></script></div>
 <!-- embedded bandcamp player for music and tunes and also songs -->
+
 <!-- divider --><div class="marquee-container"><div class="tape-marquee"></div></div>
-<!-- desktop -->
+
 <div style="height: 42px; width: fit-content; overflow: hidden;">
     <iframe style="border: 0; width: 150%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=4275574976/size=small/bgcol=333333/linkcol=e32c14/track=1598575473/transparent=false/" seamless>
         <a href="https://killallmusic.bandcamp.com/album/causality-violations">Causality Violations by Hello Meteor</a></iframe></div>
+
 <!-- divider --><div class="marquee-container"><div class="tape-marquee"></div></div>
+
 <!-- navigation -->
 <div class = "navigation">
 <h1>DIRECTORY</h1>
@@ -57,18 +106,21 @@
 <a class="nav_link" href="https://baameows.com?page=guestbook" onclick='ChangePage("guestbook"); return false'>SIGN MY GUESTBOOK</a>
 <!-- <button class="nav_link" href="https://baameows.com" onclick='ChangePage("home"); return false'>an button</button> -->
 <!--<a class="nav_link" href="https://baameows.123guestbook.com/">sign my guestbook</a>-->
-</nav> <!-- nav end -->
-<!-- my tomanotchi!!! -->           <!-- divider --><div class="marquee-container"><div class="tape-marquee"></div></div>
-<h1>feed my weird dog for me</h1>
-<a href="https://tamanotchi.world/10469c"><img src="https://tamanotchi.world/i/10469" alt="It's tamaNOTchi! Click to feed!"></a>
+</div> <!-- nav end -->
+
+<!-- divider --><div class="marquee-container"><div class="tape-marquee"></div></div>
+
+<!-- my tomanotchi!!! -->
+<h1>FEED MY WEIRD DOG</h1>
+<a href="https://tamanotchi.world/10469c" target="_blank"><img src="https://tamanotchi.world/includes/scripts/img2.php?id=10469&amp;size=1" alt="It's tamaNOTchi! Click to feed!"></a>
 <!-- buttons!!! -->                 <!-- divider --><div class="marquee-container"><div class="tape-marquee"></div></div>
 <div id="buttons">
-    <a href="https://catbyte.site/"  target="_blank"><img src="https://catbyte.site/buttons/catbytebutton.png"/></a>
-    <a href="https://sadgrl.online/" target="_blank"><img src="https://sadgrl.online/assets/images/buttons/sadgrlonline.gif"/></a>
-    <a href="https://melonland.net/" target="_blank"><img src="https://melonland.net/images/melonland-badge-2.gif"/></a>
-    <a href="https://yesterweb.org/" target="_blank"><img src="https://yesterweb.org/img/button.png"></a>
-    <a href="http://textures.neocities.org/" target="_blank"><img src="http://textures.neocities.org/images/badge.gif"></a>
-    <a href="https://tamanotchi.world" target="_blank"><img src="https://tamanotchi.world/includes/img/tamanotchi.gif" alt="TamaNOTchi Badge"></a>
+    <a class="wiggle" href="https://catbyte.site/"  target="_blank"><img src="https://catbyte.site/buttons/catbytebutton.png"/></a>
+    <a class="wiggle" href="https://sadgrl.online/" target="_blank"><img src="https://sadgrl.online/assets/images/buttons/sadgrlonline.gif"/></a>
+    <a class="wiggle" href="https://melonland.net/" target="_blank"><img src="https://melonland.net/images/melonland-badge-2.gif"/></a>
+    <a class="wiggle" href="https://yesterweb.org/" target="_blank"><img src="https://yesterweb.org/img/button.png"></a>
+    <a class="wiggle" href="http://textures.neocities.org/" target="_blank"><img src="http://textures.neocities.org/images/badge.gif"></a>
+    <a class="wiggle" href="https://tamanotchi.world" target="_blank"><img src="https://tamanotchi.world/includes/img/tamanotchi.gif" alt="TamaNOTchi Badge"></a>
 </div> <!-- buttons end -->
 <!-- divider --><div class="marquee-container"><div class="tape-marquee"></div></div>
 </div> <!-- sidebar end -->
