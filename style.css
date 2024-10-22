@@ -3,11 +3,6 @@
     font-family: 'Pixel Operator';
     src: url('fonts/PixelOperator.ttf');
 }
-/* JMH Cthulhumbus Arcade, Copyright 2018 jorge Morón, personal use only */
-@font-face {
-    font-family: 'dogica';
-    src: url('fonts/dogica/dogicapixel.ttf');
-}
 
 @font-face {
     font-family: 'VCR';
