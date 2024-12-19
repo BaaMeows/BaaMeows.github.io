@@ -96,7 +96,7 @@ p {
 .nohover:hover { border: 0 }
 
 #sidebar_flex {
-    flex-basis: 200px;
+    flex-basis: 90px;
     flex-shrink: 0;
     height: fit-content;
     border:none;
@@ -104,6 +104,7 @@ p {
 
 #sidebar {
     height: fit-content;
+    width: 90px;
     text-align: center;
     color: red;
     background-color: black;
@@ -126,7 +127,7 @@ p {
 
 #melonland-surf-club {
     margin:auto;
-    padding: 7px;
+    padding-top: 10px;
 }
 
 #main-iframe {
